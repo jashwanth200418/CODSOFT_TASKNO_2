@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care Landing Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+        }
+        h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #fff; /* White background */
+            color: #000; /* Black text */
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333; /* Dark gray background */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: #ccc; /* Light gray on hover */
+        }
+
+        /* Main Content Section */
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 10%;
+            background-color: #fff; /* White background */
+        }
+
+        .main-content .section {
+            flex: 1;
+            margin: 0 20px;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light gray background */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .main-content .section h2 {
+            font-size: 2.5em;
+            color: #333; /* Dark text */
+        }
+
+        .main-content .section p {
+            font-size: 1.2em;
+            color: #666; /* Medium gray text */
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333; /* Dark gray background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        footer .social-icons a {
+            font-size: 1.5em;
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #ccc; /* Light gray on hover */
+        }
+
+        footer .social-icons img {
+            width: 40px;
+            height: auto;
+        }
+
+        /* About Us, and Contact Sections */
+        .about-us, .contact-us {
+            background-color: #fff; /* White background */
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        .about-us h2, .contact-us h2 {
+            font-size: 2.5em;
+            color: #333; /* Dark text */
+        }
+
+        .about-us p, .contact-us p {
+            font-size: 1.2em;
+            color: #666; /* Medium gray text */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Shop Products Section */
+        .shop-products {
+            background-color: #fff; /* White background */
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .shop-products h2 {
+            font-size: 2.5em;
+            color: #333; /* Dark text */
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            display: inline-block;
+            width: 250px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light gray background */
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.8em;
+            color: #333; /* Dark text */
+        }
+
+        .product-card p {
+            font-size: 1.2em;
+            color: #666; /* Medium gray text */
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-size: 1.5em;
+            color: #4caf50; /* Green price */
+            margin-bottom: 15px;
+        }
+
+        .product-card .btn-buy {
+            padding: 10px 20px;
+            background-color: #333; /* Dark background for button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .product-card .btn-buy:hover {
+            background-color: #ccc; /* Light gray on hover */
+        }
+
+        /* Contact Form Styling */
+        .contact-us form {
+            display: grid;
+            gap: 20px;
+            justify-items: center;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-us input, .contact-us textarea {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-us button {
+            padding: 12px 20px;
+            background-color: #333; /* Dark background for button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .contact-us button:hover {
+            background-color: #ccc; /* Light gray on hover */
+        }
+
+        /* OUR STANDARD Section */
+        .our-standard {
+            background-color: #333; /* Dark background */
+            color: white;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .our-standard h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .our-standard .logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .our-standard .logos img {
+            width: 150px;
+            height: auto;
+            margin: 20px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                padding: 20px 5%;
+            }
+
+            .main-content .section {
+                margin: 10px 0;
+            }
+
+            .about-us, .contact-us {
+                padding: 20px 5%;
+            }
+
+            nav {
+                padding: 15px 0;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1.1em;
+            }
+
+            .product-card {
+                width: 100%;
+            }
+
+            .our-standard .logos {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Glow Naturally with Our Skin Care</h1>
+        <p>Your trusted partner in healthy, glowing skin.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about-us">About Us</a>
+        <a href="#shop-products">Shop Products</a>
+        <a href="#contact-us">Contact Us</a>
+    </nav>
+
+    <!-- About Us Section -->
+    <div id="about-us" class="about-us">
+        <h2>About Us</h2>
+        <p>At Glow Naturally, we offer personalized skin care solutions designed to make your skin healthy, radiant, and youthful. With expert advice, premium products, and a range of skin treatments, we are here to help you achieve your beauty goals.</p>
+        <img src="https://www.skincarepersonaltouch.com/cdn/shop/files/XT4A6481F.jpg?v=1711434717&width=750" alt="About Us Image">
+    </div>
+
+    <!-- Shop Products Section -->
+    <div id="shop-products" class="shop-products">
+        <h2>Shop Best Skin Care Products</h2>
+        <div class="product-card">
+            <img src="https://www.dermstore.com/images?url=https://static.thcdn.com/productimg/original/11290635-9705199924558162.jpg&format=webp&auto=avif&width=820&height=820&fit=cover" alt="Product 1">
+            <h3>Hydrating Facial Cream</h3>
+            <p>A luxurious cream that provides deep hydration for soft and glowing skin.</p>
+            <div class="price">$29.99</div>
+            <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="https://images.thedermaco.com/catalog/product/1/0/1080x1080-2.jpg?auto=format&fit=contain&width=720&auto=compress?format=auto" alt="Product 2">
+            <h3>Vitamin C Serum</h3>
+            <p>Brightens and revitalizes your skin for a youthful glow.</p>
+            <div class="price">$49.99</div>
+            <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="https://www.teenilicious.com/cdn/shop/files/salicylic-gel.jpg?v=1689331476" alt="Product 3">
+            <h3>Acne Treatment Gel</h3>
+            <p>Effective treatment for acne-prone skin, reducing breakouts and inflammation.</p>
+            <div class="price">$19.99</div>
+            <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- OUR STANDARD Section -->
+    <div class="our-standard">
+        <h2>Our Standard</h2>
+        <div class="logos">
+            <img src="https://www.shutterstock.com/shutterstock/photos/2394932267/display_1500/stock-vector-dark-grey-no-animal-testing-isolated-stamp-sticker-with-bunny-or-rabbit-icon-vector-illustration-2394932267.jpg" alt="Animal Test-Free">
+            <img src="https://as1.ftcdn.net/v2/jpg/00/87/15/96/1000_F_87159648_FsJWViwCLfokZrnXWqmvAwwlB2URoMLt.jpg" alt="100% Natural">
+            <img src="https://as1.ftcdn.net/v2/jpg/05/37/93/00/1000_F_537930054_hW1ZsqAMHiljgltH2iSKyxnyWp0p9l8Y.jpg" alt="SLS Free">
+            <img src="https://cdn.worldvectorlogo.com/logos/ifra-international-fragrannce-association.svg" alt="IFRA Certified">
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contact-us" class="contact-us">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Get in touch with us today!</p>
+        <form action="your-server-endpoint" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Glow Naturally. All Rights Reserved.</p>
+        <div class="social-icons">
+           <a href="https://www.instagram.com/jashwanth_varma_2/profilecard/?igsh=MXhxZGJ6ZjlsbHlxdw==" target="_blank" title="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100081157440312&mibextid=ZbWKwL" target="_blank" title="Facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30">
+        </a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
